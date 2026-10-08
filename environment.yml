@@ -1,0 +1,19 @@
+name: estip-building-toolbox
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - geopandas>=1.1,<2.0
+  - shapely>=2.1,<3.0
+  - pandas>=3.0,<4.0
+  - numpy>=2.4,<3.0
+  - pyyaml>=6.0,<7.0
+  - pyogrio
+  - pyproj
+  # Dev tools
+  - jupyter
+  - ipykernel
+  - pytest>=9.0
+  - pip
+  - pip:
+    - -e .

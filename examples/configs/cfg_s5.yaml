@@ -1,0 +1,15 @@
+workspace: "D:/.../EstIP-Building-Toolbox/examples/example_workspace.gpkg"
+input_layer: s4_context_features
+municipalities: municipalities
+state_field: BL
+region_field: 
+municipality_field: AGS
+typology_field: REGIOSTAR_17
+grid: census_cells
+grid_id_field: CellCode
+address_points: address_points
+address_id_field: addr_gmlid
+add_id_field: add_id
+cnt_field: CNT_ADD
+clean_geometries: False
+output_layer: s5_spatial_assignment

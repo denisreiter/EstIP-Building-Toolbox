@@ -1,0 +1,18 @@
+# run_all_config.yaml — defines the full pipeline order.
+# Each step's `name` must match its subpackage folder under scripts/.
+# `config` points to that script's own standalone config file (see examples/configs/).
+# Use '#' to exclude a script from running.
+
+steps:
+  - name: s1_preprocessing
+    config: cfg_s1.yaml
+  - name: s2_basic_geometric_features
+    config: cfg_s2.yaml
+  - name: s3_neighborhood_features
+    config: cfg_s3.yaml
+  - name: s4_context_features
+    config: cfg_s4.yaml
+  - name: s5_spatial_assignment
+    config: cfg_s5.yaml
+  - name: s6_population_mapping
+    config: cfg_s6.yaml

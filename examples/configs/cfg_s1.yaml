@@ -1,0 +1,12 @@
+workspace: "D:/.../EstIP-Building-Toolbox/examples/example_workspace.gpkg"
+lod2_footprints: lod2_footprints
+lod2_parts: lod2_parts
+lod2_functions_table: "D:/.../EstIP-Building-Toolbox/examples/lod2_2022_residential_functions.csv"
+bldg_id_field: bldg_gmlid
+bldg_function_field: bldg_function
+roof_type_field: 
+part_selector_field: bldg_part_volume
+roof_type_field_parts: bldg_roof_type
+clean_geometries: True
+overlap_area_threshold: 1.0
+output_layer: s1_preprocessed_buildings

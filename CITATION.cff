@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "EstIP-Building-Toolbox"
+version: 0.1.0
+date-released: 2026-10-08
+authors:
+  - family-names: "Reiter"
+    given-names: "Denis"
+license: EUPL-1.2
+repository-code: "https://github.com/denisreiter/EstIP-Building-Toolbox"

@@ -1,0 +1,6 @@
+workspace: "D:/.../EstIP-Building-Toolbox/examples/example_workspace.gpkg"
+input_layer: s2_basic_geometric_features
+radius: 50
+precision: 0.001
+skip_coverage: True
+output_layer: s3_neighborhood_features

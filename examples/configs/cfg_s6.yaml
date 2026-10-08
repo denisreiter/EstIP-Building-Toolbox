@@ -1,0 +1,9 @@
+workspace: "D:/.../EstIP-Building-Toolbox/examples/example_workspace.gpkg"
+input_layer: s5_spatial_assignment
+bldg_id_field: bldg_gmlid
+grid: census_cells
+grid_id_field: CellCode
+population_field: Einwohner
+min_area: 40.0
+min_volume: 250.0
+output_layer: s6_population_mapping

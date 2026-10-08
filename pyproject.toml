@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=77.0.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "EstIP-Building-Toolbox"
+version = "0.1.0"
+description = "This set of tools enriches building footprint data with various additional features."
+requires-python = ">=3.11"
+readme = "README.md"
+license = "EUPL-1.2"
+license-files = ["LICENSE"]
+authors = [
+    {name = "Denis Reiter"}
+]
+dependencies = [
+    "geopandas>=1.1,<2.0",
+    "shapely>=2.1,<3.0",
+    "pandas>=3.0,<4.0",
+    "numpy>=2.4,<3.0",
+    "pyyaml>=6.0,<7.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=9.0",
+    "jupyter",
+    "ipykernel",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[project.scripts]
+run-all = "scripts.run_all:main"
+run-s1 = "scripts.s1_preprocessing.cli:main"
+run-s2 = "scripts.s2_basic_geometric_features.cli:main"
+run-s3 = "scripts.s3_neighborhood_features.cli:main"
+run-s4 = "scripts.s4_context_features.cli:main"
+run-s5 = "scripts.s5_spatial_assignment.cli:main"
+run-s6 = "scripts.s6_population_mapping.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/denisreiter/EstIP-Building-Toolbox"
+Repository = "https://github.com/denisreiter/EstIP-Building-Toolbox"
+Issues = "https://github.com/denisreiter/EstIP-Building-Toolbox/issues"

@@ -1,0 +1,7 @@
+workspace: "D:/.../EstIP-Building-Toolbox/examples/example_workspace.gpkg"
+input_layer: s1_preprocessed_buildings
+height_field: bldg_measured_height
+volume_field: bldg_volume
+wall_area_field: wall_area
+roof_area_field: roof_area
+output_layer: s2_basic_geometric_features

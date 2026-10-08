@@ -1,0 +1,12 @@
+workspace: "D:/.../EstIP-Building-Toolbox/examples/example_workspace.gpkg"
+input_layer: s3_neighborhood_features
+bldg_id_field: bldg_gmlid
+volume_field: V
+streets: streets
+address_points: address_points
+address_id_field: addr_gmlid
+blocks: blocks
+block_id_field: OBJID
+block_type_field: OBJART
+clean_geometries: False
+output_layer: s4_context_features
