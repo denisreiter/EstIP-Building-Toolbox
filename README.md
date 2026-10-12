@@ -8,6 +8,14 @@ All rights reserved.
 ## Overview
 This set of tools is meant to enrich building data with various features, enabling additional processing steps down the line. It was built as part of the **EstIP population estimation pipeline** and serves as the foundation for the corresponding [dataset series](https://data.fdz.ioer.de/dataverse/root/?q=EstIP). Therefore, the structure and output is tailored towards EstIP, but it can be used in different contexts, too. The output of this toolbox is directly compatible with the actual population estimation pipeline, which can be found [here](https://github.com/denisreiter/EstIP-Estimation-Pipeline).
 
+### Related publications:
+
+1. Reiter, D., Jehling, M. and Hecht, R. (2023) ‘Benefits of using address-based dasymetric mapping in micro-level census disaggregation’, _AGILE: GIScience Series_, 4, pp. 1–7.Available at: https://doi.org/10.5194/agile-giss-4-38-2023.
+
+2. Reiter, D., Jehling, M. and Hecht, R. (2026) ‘Urban form metrics for building occupancy modelling: applications and impacts’, _Buildings & Cities_, 7(1), pp. 1035–1051. Available at: https://doi.org/10.5334/bc.749.
+
+3. Reiter, D., Jehling, M. and Hecht, R. (2026) ‘Intercensal building‑based population estimation’, _International Journal of Digital Earth_, 19(2), p. 2738267. Available at: https://doi.org/10.1080/17538947.2026.2738267.
+
 
 ## Features
 - Built for 3D building data (LoD2)
