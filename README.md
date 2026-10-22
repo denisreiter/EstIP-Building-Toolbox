@@ -1,5 +1,6 @@
 # EstIP-Building-Toolbox
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23558227.svg)](https://doi.org/10.5281/zenodo.23558227)  
 Developed at [IOER](https://www.ioer.de/en/)  
 Copyright © Denis Reiter, Dresden, 2026  
 All rights reserved.
