@@ -114,7 +114,7 @@ _Note: This step can be skipped if building data already is preprocessed._
 #### s3_neighbourhood_features
 - Input: Output from s1
 - Tasks: Calculate features dependent on neighbouring buildings within a configurable radius. Fields are dynamically named based on radius. Default: 50m.
-- Features: "DIST_NGHB", "RATIO_SW", "CNT_NGHB_Rxx", "DIST_NGHB_Rxx"
+- Features: "DIST_NGHB", "RATIO_SW", "CNT_NGHB_RXX", "DIST_NGHB_RXX"
 #### s4_context_features
 - Input: Output from s3, Addreses (points), Blocks (polygons), Streets (polylines)
 - Tasks: Calculates features and ratios based on contextual information.
@@ -123,7 +123,7 @@ _Note: Each ancillary dataset is optional, but at least one has to provided. Cor
 #### s5_spatial_assignment
 - Input: Output from s4, muncipalities, grid
 - Tasks: Adds municipality, reginonal type (optional) and grid cell ID to buildings.
-- Features: "MUNICIP", "REG_TYPE", "MAPPED_CELLCODE"
+- Features: "STATE", "REGION", "MUNICIP", "REG_TYPE", "MAPPED_CELLCODE"
 #### s6_population_mapping
 - Input: Output from s6, grid
 - Tasks: Dasymetrically maps population from census raster to buildings by grid cell ID.
