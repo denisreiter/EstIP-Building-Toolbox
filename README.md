@@ -1,5 +1,6 @@
 # EstIP-Building-Toolbox
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23558227.svg)](https://doi.org/10.5281/zenodo.23558227)  
 Developed at [IOER](https://www.ioer.de/en/)  
 Copyright © Denis Reiter, Dresden, 2026  
 All rights reserved.
@@ -132,4 +133,4 @@ _Note: This step can be skipped if no population data is available._
 
 
 ## Citation 
-Reiter, Denis (2026): EstIP-Building-Toolbox (Version 0.1.0) [Software]. https://github.com/denisreiter/EstIP-Building-Toolbox
+Reiter, D. (2026). EstIP-Building-Toolbox (Version 0.1.0) [Computer software]. https://doi.org/10.5281/zenodo.23558227
