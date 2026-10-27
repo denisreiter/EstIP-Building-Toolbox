@@ -103,28 +103,33 @@ The config files can be saved for reproducability. Config flags given via comman
 
 
 ## Pipeline Overview
+
+A detailed description of features can be found under [docs/features.md](https://github.com/denisreiter/EstIP-Building-Toolbox/blob/main/docs/features.md).
+
 #### s1_preprocessing
 - Input: LoD2 buildings, LoD2 building parts
 - Tasks: Cleaning, reprojecting, joining parts info, assign residential building types.
-- Features: "CNT_PRTS", "RF_TYPE", "FNC_CODE"  
+- Features: "CNT_PRTS", "FNC_CODE", "RF_TYPE"  
 _Note: This step can be skipped if building data already is preprocessed._
 #### s2_basic_geometric_features
 - Input: Output from s1 or raw buildings
 - Tasks: Calculate basic geometric features which are not dependent on context.
-- Features: "SHPX_2D", "RATIO_C_A", "RATIO_LW_MRR", "RATIO_MRR_A", "CNT_NDS", "CNT_HLS", "A", "C", "H", "V", "RATIO_HLL_V"
+- Features: "A", "C", "CNT_HLS", "CNT_NDS", "H", "RATIO_C_A", "RATIO_HLL_V", "RATIO_LW_MRR", "RATIO_MRR_A", "SHPX_2D", "V"
 #### s3_neighbourhood_features
 - Input: Output from s1
 - Tasks: Calculate features dependent on neighbouring buildings within a configurable radius. Fields are dynamically named based on radius. Default: 50m.
-- Features: "DIST_NGHB", "RATIO_SW", "CNT_NGHB_RXX", "DIST_NGHB_RXX"
+- Features: "CNT_NGHB_RXX", "CVR_NGHB_RXX", "DIST_NGHB", "DIST_NGHB_RXX", "RATIO_SW"
+*Note: This script includes the option to calculate built-up coverage in radius ("CVR_NGHB_RXX"). This is computationally heavy and only recommended for < 1 million buildings.*
 #### s4_context_features
 - Input: Output from s3, Addreses (points), Blocks (polygons), Streets (polylines)
 - Tasks: Calculates features and ratios based on contextual information.
-- Features: "DIST_STRT", "CNT_ADD", "BLCK_TYPE", "CNT_BLCK", "A_SUM_BLCK", "A_MEAN_BLCK", "A_STD_BLCK", "V_SUM_BLCK", "V_MEAN_BLCK", "V_STD_BLCK", "MEAN_DIST_NGHB_BLCK", "RATIO_A_BLCK", "RATIO_A_SUM", "RATIO_V_SUM", "RATIO_A_MEAN", "RATIO_V_MEAN"  
-_Note: Each ancillary dataset is optional, but at least one has to provided. Corresponding features will not be processed for those not not provided._
+- Features: "A_MEAN_BLCK", "A_STD_BLCK", "A_SUM_BLCK", "BLCK_TYPE", "CNT_ADD", "CNT_BLCK", "DIST_STRT", "MEAN_DIST_NGHB_BLCK", "RATIO_A_BLCK", "RATIO_A_MEAN", "RATIO_A_SUM", "RATIO_V_MEAN", "RATIO_V_SUM", "V_MEAN_BLCK", "V_STD_BLCK", "V_SUM_BLCK"  
+_Note: Each ancillary dataset is optional, but at least one has to be provided. Corresponding features will not be processed for those not provided._
 #### s5_spatial_assignment
 - Input: Output from s4, muncipalities, grid
-- Tasks: Adds municipality, reginonal type (optional) and grid cell ID to buildings.
-- Features: "STATE", "REGION", "MUNICIP", "REG_TYPE", "MAPPED_CELLCODE"
+- Tasks: Adds fields for municipality, region, reginonal type, state (all optional) and grid cell ID to buildings.
+- Features: "MAPPED_CELLCODE", "MUNICIP", "REGION", "REG_TYPE", "STATE"
+*Note: At least one of the fields "MUNICIP", "REGION", "REG_TYPE" or "STATE" must be provided.*
 #### s6_population_mapping
 - Input: Output from s6, grid
 - Tasks: Dasymetrically maps population from census raster to buildings by grid cell ID.
