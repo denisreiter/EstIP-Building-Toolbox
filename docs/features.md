@@ -37,7 +37,7 @@
 | 0.1.0   | s5     | 2D        | REG_TYPE            | Region type                                                                                                |
 | 0.1.0   | s5     | 2D        | REGION              | Region code                                                                                                |
 | 0.1.0   | s1     | 3D        | RF_TYPE             | Roof type                                                                                                  |
-| 0.1.0   | s2     | 2D        | SHPX_2D             | Shape Index:                                                                                               |
+| 0.1.0   | s2     | 2D        | SHPX_2D             | Shape Index / Roundness: *R = (4π · A) / C²*                                                                                          |
 | 0.1.0   | s5     | 2D        | STATE               | State code                                                                                                 |
 | 0.1.0   | s2     | 3D        | V                   | Volume                                                                                                     |
 | 0.1.0   | s4     | 3D        | V_MEAN_BLCK         | Mean building volume in block                                                                              |
