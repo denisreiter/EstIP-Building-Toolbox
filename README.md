@@ -118,7 +118,7 @@ _Note: This step can be skipped if building data already is preprocessed._
 #### s3_neighbourhood_features
 - Input: Output from s1
 - Tasks: Calculate features dependent on neighbouring buildings within a configurable radius. Fields are dynamically named based on radius. Default: 50m.
-- Features: "CNT_NGHB_RXX", "CVR_NGHB_RXX", "DIST_NGHB", "DIST_NGHB_RXX", "RATIO_SW"
+- Features: "CNT_NGHB_RXX", "CVR_NGHB_RXX", "DIST_NGHB", "DIST_NGHB_RXX", "RATIO_SW"  
 *Note: This script includes the option to calculate built-up coverage in radius ("CVR_NGHB_RXX"). This is computationally heavy and only recommended for < 1 million buildings.*
 #### s4_context_features
 - Input: Output from s3, Addreses (points), Blocks (polygons), Streets (polylines)
@@ -128,7 +128,7 @@ _Note: Each ancillary dataset is optional, but at least one has to be provided. 
 #### s5_spatial_assignment
 - Input: Output from s4, muncipalities, grid
 - Tasks: Adds fields for municipality, region, reginonal type, state (all optional) and grid cell ID to buildings.
-- Features: "MAPPED_CELLCODE", "MUNICIP", "REGION", "REG_TYPE", "STATE"
+- Features: "MAPPED_CELLCODE", "MUNICIP", "REGION", "REG_TYPE", "STATE"  
 *Note: At least one of the fields "MUNICIP", "REGION", "REG_TYPE" or "STATE" must be provided.*
 #### s6_population_mapping
 - Input: Output from s6, grid
